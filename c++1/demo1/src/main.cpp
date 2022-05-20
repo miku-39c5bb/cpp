@@ -13,7 +13,7 @@ using std::vector;
 int main()
 {
     vector<int> ivec; // 保存int类型数据的一个vector
-    vector<miku> dvec;
+    vector<double> dvec;
     vector<string> svec;
     vector<Dog> dogvec;
     vector<Sales_item> Sales_vec;

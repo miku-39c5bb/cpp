@@ -21,8 +21,8 @@ int main() {
     cout << sizeof(long) << endl;
     cout << sizeof(long long) << endl;
     cout << sizeof(float) << endl;
-    cout << sizeof(miku) << endl;
-    cout << sizeof(long miku) << endl;
+    cout << sizeof(double) << endl;
+    cout << sizeof(long double) << endl;
 
     int x[] = {2, 4, 6, 8, 10};
     for (int k = 0, cnt = 10; k < sizeof(x) / sizeof(int); ++k, --cnt) {
@@ -31,8 +31,8 @@ int main() {
 
     print_array(x, sizeof(x) / sizeof(x[0]));
 
-    miku dval = 1.23;
-    miku* p = &dval;
+    double dval = 1.23;
+    double* p = &dval;
     cout << *p << endl;
     cout << sizeof(p) << endl;   // 指针的大小
     cout << sizeof(*p) << endl;  // 指针指向对象的大小

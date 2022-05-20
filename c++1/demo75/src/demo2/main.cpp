@@ -4,7 +4,7 @@
 using namespace std;
 
 void print(const string &);
-void print(miku);
+void print(double);
 void print(int);
 
 // void print1(int *a) {}
@@ -27,8 +27,8 @@ int main() {
 void print(const string &s) {
     cout << "string: " << s << endl;
 }
-void print(miku d) {
-    cout << "miku: " << d << endl;
+void print(double d) {
+    cout << "double: " << d << endl;
 }
 void print(int i) {
     cout << "int: " << i << endl;

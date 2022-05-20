@@ -18,11 +18,11 @@ int main() {
 
     cout << *ps << endl;
 
-    miku a = 1.2;
-    miku* p = &a;
+    double a = 1.2;
+    double* p = &a;
 
-    const miku pi = 3.14;
-    const miku* cptr;  // 指向常量的指针
+    const double pi = 3.14;
+    const double* cptr;  // 指向常量的指针
     cptr = &pi;
 
     cptr = &a;
@@ -33,7 +33,7 @@ int main() {
     int* const curErr = &errNum;
     // curErr = &nNum;
 
-    const miku* const pi_ptr = &pi;
+    const double* const pi_ptr = &pi;
     // pi_ptr = &a;
     // *pi_ptr = 3.14;
 

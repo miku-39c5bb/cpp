@@ -34,7 +34,7 @@ void DetermineType(CAnimal* pAnimal) {
 }
 
 int main() {
-    miku dPI = 3.14159265;
+    double dPI = 3.14159265;
 
     // C++转换，通常类似于C语言中的隐式类型转换
     int nNum = static_cast<int>(dPI);

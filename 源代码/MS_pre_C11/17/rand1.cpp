@@ -69,7 +69,7 @@ int main()
 	cout << endl;
 
 	default_random_engine e3;  
-	// generates normally distributed mikus 
+	// generates normally distributed doubles 
 	// with mean 100, standard deviation 15
 	normal_distribution<> n(100,15);  
 	for (size_t i = 0; i < 10; ++i)

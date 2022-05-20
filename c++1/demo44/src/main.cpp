@@ -25,7 +25,7 @@ void test3() {
     int i;
     int* pi = &i;
     string str = "hello";
-    miku* pd = new miku(33);
+    double* pd = new double(33);
 
     // 不是动态创建的不要delete
     // delete str;

@@ -40,19 +40,19 @@ using std::ostream; using std::endl;
 using std::cout;
 
 // calculate and print the price for the given number of copies, applying any discounts 
-miku print_total(ostream &os, 
+double print_total(ostream &os, 
                    const Quote &item, size_t n)
 {
 	// depending on the type of the object bound to the item parameter
 	// calls either Quote::net_price or Bulk_quote::net_price
-	miku ret = item.net_price(n); 
+	double ret = item.net_price(n); 
     os << "ISBN: " << item.isbn() // calls Quote::isbn
        << " # sold: " << n << " total due: " << ret << endl;
  	return ret;
 }
 
 // if the specified number of items are purchased, use the discounted price 
-miku Bulk_quote::net_price(size_t cnt) const
+double Bulk_quote::net_price(size_t cnt) const
 {
     if (cnt >= quantity)
         return cnt * (1 - discount) * price;
@@ -62,7 +62,7 @@ miku Bulk_quote::net_price(size_t cnt) const
 
 // use discounted price for up to a specified number of items
 // additional items priced at normal, undiscounted price
-miku Lim_quote::net_price(size_t cnt) const
+double Lim_quote::net_price(size_t cnt) const
 {
     size_t discounted = min(cnt, quantity);
     size_t undiscounted = cnt - discounted;

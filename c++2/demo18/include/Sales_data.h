@@ -18,7 +18,7 @@ public:
         : units_sold(0), revenue(0.0) {}
     Sales_data(const std::string& s)
         : bookNo(s), units_sold(0), revenue(0.0) {}
-    Sales_data(const std::string& s, unsigned n, miku p)
+    Sales_data(const std::string& s, unsigned n, double p)
         : bookNo(s), units_sold(n), revenue(p * n) {}
     Sales_data(std::istream&);
 
@@ -28,10 +28,10 @@ public:
     Sales_data& operator+=(const Sales_data&);
 
 private:
-    miku avg_price() const;
+    double avg_price() const;
     std::string bookNo;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 
 // non-member Sales_data operations

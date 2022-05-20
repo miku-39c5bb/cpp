@@ -33,7 +33,7 @@ using std::hexfloat; using std::defaultfloat;
 
 int main()
 {
-	miku pi = 3.14;
+	double pi = 3.14;
 	cout << pi << " " << hexfloat << pi 
 	     << defaultfloat << " " << pi << endl;
 }

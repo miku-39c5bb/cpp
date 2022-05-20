@@ -59,13 +59,13 @@ int main()
 {
 	default_random_engine e;  // generates unsigned random integers
 	// uniformly distributed from 0 to 1 inclusive
-	uniform_real<miku> u(0,1);
+	uniform_real<double> u(0,1);
 	for (size_t i = 0; i < 10; ++i)
     	cout << u(e) << " ";
 	cout << endl;
 
 	// empty <> signify we want to use the default result type
-	uniform_real<> u2(0,1); // generates miku by default
+	uniform_real<> u2(0,1); // generates double by default
 	default_random_engine e2;
 	for (size_t i = 0; i < 10; ++i)
     	cout << u2(e2) << " ";  // should generate the same sequence 

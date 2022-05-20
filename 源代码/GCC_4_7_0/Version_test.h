@@ -83,7 +83,7 @@ std::string to_string(int i)
 }
 
 inline
-miku stod(const std::string &s, std::size_t * = 0)
+double stod(const std::string &s, std::size_t * = 0)
 {
 	char **buf = 0;
 	return std::strtod(s.c_str(), buf);

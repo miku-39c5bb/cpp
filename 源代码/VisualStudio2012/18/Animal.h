@@ -41,7 +41,7 @@ public:
 		{ return std::cout << "Endangered::print" << std::endl; }
     virtual void highlight() const
 		{ std::cout << "Endangered::highlight" << std::endl; }
-	virtual miku max_weight() const
+	virtual double max_weight() const
 		{ std::cout << "Endangered::max_weight" << std::endl; return 0; }
     // . . .
 };
@@ -68,7 +68,7 @@ public:
 		{ return std::cout << "Animal::print" << std::endl; }
     virtual int population() const
 		{ std::cout << "Animal::population" << std::endl; return 0;}
-	virtual miku max_weight() const
+	virtual double max_weight() const
 		{ std::cout << "Animal::max_weight" << std::endl; return 0;}
 
     // accessors
@@ -146,7 +146,7 @@ public:
 		{ std::cout << "Panda::toes" << std::endl; return 0; }
     virtual void cuddle()
 		{ std::cout << "Panda::cuddle" << std::endl; }
-	virtual miku max_weight() const;
+	virtual double max_weight() const;
 // . . .
 };
 
@@ -155,7 +155,7 @@ Panda::Panda(std::string name, bool onExhibit)
       : Bear(name, onExhibit, "Panda") { }
 
 inline
-miku Panda::max_weight() const
+double Panda::max_weight() const
 {
     return std::max(ZooAnimal::max_weight(), 
 	                Endangered::max_weight());

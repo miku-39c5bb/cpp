@@ -63,7 +63,7 @@ hash<Sales_data>::operator()(const Sales_data& s) const
 {
     return hash<string>()(s.bookNo) ^
            hash<unsigned>()(s.units_sold) ^
-           hash<miku>()(s.revenue);
+           hash<double>()(s.revenue);
 }
 }  // close the std namespace; note: no semicolon after the close curly
 
@@ -73,7 +73,7 @@ Sales_data::Sales_data(istream &is)
 	is >> *this; // read a transaction from is into this object
 }
 
-miku Sales_data::avg_price() const
+double Sales_data::avg_price() const
 {
 	if (units_sold)
 		return revenue/units_sold;
@@ -83,7 +83,7 @@ miku Sales_data::avg_price() const
 
 istream &operator>>(istream &is, Sales_data &item)
 {
-	miku price;  // no need to initialize; we'll read into price before we use it
+	double price;  // no need to initialize; we'll read into price before we use it
 	is >> item.bookNo >> item.units_sold >> price;
 	if (is)        // check that the inputs succeeded
     	item.revenue = item.units_sold * price;
@@ -102,7 +102,7 @@ ostream &operator<<(ostream &os, const Sales_data &item)
 // operators replace these original named functions
 istream &read(istream &is, Sales_data &item)
 {
-	miku price = 0;
+	double price = 0;
 	is >> item.bookNo >> item.units_sold >> price;
 	item.revenue = price * item.units_sold;
 	return is;

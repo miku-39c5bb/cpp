@@ -4,16 +4,16 @@
 using namespace std;
 
 // 全局变量
-// miku interestRate;
+// double interestRate;
 
 class Account {
 public:
-    explicit Account(const std::string& name, miku money)
+    explicit Account(const std::string& name, double money)
         : owner(name), amount(money) {}
-    miku getAmount() const {
+    double getAmount() const {
         return this->amount;
     }
-    void deposit(miku money) {
+    void deposit(double money) {
         this->amount += money;
     }
     void applyInt() {
@@ -23,23 +23,23 @@ public:
     // 最好是将对静态成员变量进行操作的函数也设置为静态
     // 这样就可以不用创建对象，直接通过类名和::调用static函数
     // 静态成员函数不能用this指针，不能是const函数
-    static miku rate() {
+    static double rate() {
         return interestRate;
     }
-    static miku rate(miku newRate) {
+    static double rate(double newRate) {
         interestRate = newRate;
         return interestRate;
     }
 
 private:
     std::string owner;
-    miku amount;
-    static miku interestRate;  // 不论创建多少个对象，这个static的interestRate都只有一个
+    double amount;
+    static double interestRate;  // 不论创建多少个对象，这个static的interestRate都只有一个
     static const long a = 1;     // 静态常量整型可以直接初始化
     int b = 1;
 };
 // 在C++中，static静态成员变量不能在类的内部初始化。在类的内部只是声明，定义必须在类定义体的外部，通常在类的实现文件中初始化
-miku Account::interestRate = 0.015;
+double Account::interestRate = 0.015;
 
 int main(int argc, char** argv) {
     Account::rate(0.030);

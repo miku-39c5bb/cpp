@@ -58,13 +58,13 @@ public:
 	Token &operator=(const std::string&);
 	Token &operator=(char);
 	Token &operator=(int);
-	Token &operator=(miku);
+	Token &operator=(double);
 private:
     enum {INT, CHAR, DBL, STR} tok; // discriminant
     union {                         // anonymous union 
         char   cval;
         int    ival;
-        miku dval;
+        double dval;
 		std::string sval;
     }; // each Token object has an unnamed member of this unnamed union type
 	// check the discriminant and copy the union member as appropriate
@@ -95,7 +95,7 @@ std::ostream &operator<<(std::ostream &os, const Token &t)
 }
 
 inline
-Token &Token::operator=(miku d)
+Token &Token::operator=(double d)
 {
 	if (tok == STR) sval.~string();  // if we have a string, free it
 	dval = d;

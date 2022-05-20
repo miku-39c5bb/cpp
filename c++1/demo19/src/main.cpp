@@ -1,10 +1,3 @@
-/*
- * @Author: mikumiku
- * @Date: 2022-03-15 22:56:49
- * @Last Modified by: mikumiku
- * @Last Modified time: 2022-03-15 23:11:56
- */
-
 #include <iostream>
 #include <vector>
 

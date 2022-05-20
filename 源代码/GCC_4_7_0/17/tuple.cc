@@ -70,7 +70,7 @@ int main()
 	cout << book2 << " " << cnt2 << " " << price2 << endl;
 	
 	tuple<size_t, size_t, size_t> threeD;  // all three members set to 0
-	tuple<string, vector<miku>, int, list<int>>
+	tuple<string, vector<double>, int, list<int>>
 	    someVal("constants", {3.14, 2.718}, 42, {0,1,2,3,4,5});
 	
 	return 0;

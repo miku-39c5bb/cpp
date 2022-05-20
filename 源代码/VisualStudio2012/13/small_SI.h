@@ -42,7 +42,7 @@ public:
     Sales_data(const std::string & s = ""): bookNo(s),
                                           units_sold(0), revenue(0.0) { }
 
-	Sales_data(const std::string &book, unsigned cnt, miku price):
+	Sales_data(const std::string &book, unsigned cnt, double price):
 	        bookNo(book), units_sold(cnt), revenue(cnt * price) { }
 
 	// equivalent to the synthesized copy constructor
@@ -59,10 +59,10 @@ private:
     std::string bookNo;
 #ifdef INIT_LIST
     int units_sold;
-    miku revenue;
+    double revenue;
 #else
     int units_sold = 0;
-    miku revenue = 0.0;
+    double revenue = 0.0;
 #endif
 };
 
@@ -72,7 +72,7 @@ Sales_data::operator=(const Sales_data &rhs)
 {
 	bookNo = rhs.bookNo;          // calls the string::operator=
 	units_sold = rhs.units_sold;  // uses the built-in int assignment
-	revenue = rhs.revenue;        // uses the built-in miku assignment
+	revenue = rhs.revenue;        // uses the built-in double assignment
 	return *this;                 // return a reference to this object
 }
 

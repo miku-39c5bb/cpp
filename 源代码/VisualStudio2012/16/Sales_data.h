@@ -58,20 +58,20 @@ public:
 	Sales_data(const std::string &s):
 	           bookNo(s), units_sold(0), revenue(0.0) { }
 #endif
-	Sales_data(const std::string &s, unsigned n, miku p):
+	Sales_data(const std::string &s, unsigned n, double p):
 	           bookNo(s), units_sold(n), revenue(p*n) { }
 	Sales_data(std::istream &);
 	std::string isbn() const { return bookNo; }
 	Sales_data& operator+=(const Sales_data&);
 private:
-	miku avg_price() const;  
+	double avg_price() const;  
 	std::string bookNo;
 #ifdef IN_CLASS_INITS
 	unsigned units_sold = 0;
-	miku revenue = 0.0;
+	double revenue = 0.0;
 #else
 	unsigned units_sold;
-	miku revenue;
+	double revenue;
 #endif
 };
 

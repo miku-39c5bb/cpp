@@ -1,3 +1,11 @@
+/*** 
+ * @Author: doubledouble
+ * @Date: 2022-05-20 23:04:33
+ * @LastEditTime: 2022-05-20 23:07:30
+ * @LastEditors: doubledouble
+ * @Description: 
+ * @FilePath: \c++\c++2\demo28\include\Sales_item.h
+ */
 /*
  * This file contains code from "C++ Primer, Fifth Edition", by Stanley B.
  * Lippman, Josee Lajoie, and Barbara E. Moo, and is covered under the

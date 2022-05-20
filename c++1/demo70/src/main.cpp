@@ -13,7 +13,7 @@ public:
     // 由于这个函数不对类的数据成员做任何修改，所以可以定义为常函数【参数列表后面加上const】
     bool same_isbn(const Sales_item &rhs) const;
 
-    miku avg_price() const;
+    double avg_price() const;
 
 public:
     Sales_item() : units_sold(0), revenue(0) {
@@ -24,7 +24,7 @@ public:
 public:
     std::string isbn;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 
 bool Sales_item::same_isbn(const Sales_item &rhs) const {
@@ -33,7 +33,7 @@ bool Sales_item::same_isbn(const Sales_item &rhs) const {
 }
 
 // 类外定义成员函数体，需要加上类作用域，即类的名字
-miku Sales_item::avg_price() const {
+double Sales_item::avg_price() const {
     if (!this->units_sold) {
         return 0;
     } else {

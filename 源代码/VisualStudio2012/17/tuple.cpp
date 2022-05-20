@@ -78,14 +78,14 @@ int main()
 	
 	tuple<size_t, size_t, size_t> threeD;  // all three members set to 0
 #ifdef LIST_INIT
-	tuple<string, vector<miku>, int, list<int>>
+	tuple<string, vector<double>, int, list<int>>
 	    someVal("constants", {3.14, 2.718}, 42, {0,1,2,3,4,5});
 #else
-	miku temp1[] = {3.14, 2.718};
+	double temp1[] = {3.14, 2.718};
 	int temp2[] = {0,1,2,3,4,5};
-	tuple<string, vector<miku>, int, list<int>>
+	tuple<string, vector<double>, int, list<int>>
 		someVal("constants", 
-				vector<miku>(begin(temp1), end(temp1)),
+				vector<double>(begin(temp1), end(temp1)),
 				42,
 				list<int>(begin(temp2), end(temp2)));
 #endif

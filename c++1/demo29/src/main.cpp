@@ -11,7 +11,7 @@ int main() {
     cout << i % j << endl;
 
     long a;
-    miku d;
+    double d;
     float f;
 
     cout << 5 + 10 * 20 / 2 << endl;
@@ -27,8 +27,8 @@ int main() {
     sv += ival;
     cout << "溢出 sv = " << sv << endl;
 
-    // miku dval = 10 / 3;
-    miku dval = 10.0 / 3.0;
+    // double dval = 10 / 3;
+    double dval = 10.0 / 3.0;
     cout << dval << endl;
 
     int ival2 = 42;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "../include/Sales_item.h"
 using namespace std;
 
 class Dog {
@@ -37,6 +38,10 @@ int main() {
     cout << b << endl;
     cout << dd << endl;
     cout << str << endl;
+
+    // 输入X-123-7890 10 120.0
+    Sales_item item(cin);
+    cout << item << endl;
 
     return 0;
 }

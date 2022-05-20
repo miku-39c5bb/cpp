@@ -53,7 +53,7 @@ int main()
 	// range variable must be a reference so we can write to the elements
 	// C++11 code: range for statement
 	// for (auto &r : v)   // for each element in v
-		//r *= 2;         // miku the value of each element in v
+		//r *= 2;         // double the value of each element in v
 
 	// replace with traditional for loop:
 	for (vector<int>::iterator r = v.begin(); r != v.end(); ++r)

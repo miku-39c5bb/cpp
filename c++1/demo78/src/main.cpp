@@ -55,8 +55,8 @@ PF ff(int x) {
 //     return demo;
 // }
 
-void ff(vector<miku> vec) {
-    cout << "ff(vector<miku> vec)" << endl;
+void ff(vector<double> vec) {
+    cout << "ff(vector<double> vec)" << endl;
 }
 void ff(unsigned int *x) {
     cout << "ff(unsigned int *x)" << endl;
@@ -65,15 +65,15 @@ void ff(unsigned int *x) {
 int main() {
     cout << "--------" << endl;
     // void (*pf6)(int) = ff;
-    // miku (*pf6)(unsigned int) = ff;
+    // double (*pf6)(unsigned int) = ff;
     void (*pf6)(unsigned int *const) = ff;
-    vector<miku> dvec;
+    vector<double> dvec;
     unsigned int x = 1;
     unsigned int *const px = &x;
     pf6(&x);
     void (*pf7)(unsigned int *) = ff;
     pf7(px);
-    void (*pf8)(vector<miku> vec) = ff;
+    void (*pf8)(vector<double> vec) = ff;
     pf8(dvec);
     cout << "--------" << endl;
     int a = 11;

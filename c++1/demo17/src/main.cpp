@@ -14,7 +14,7 @@ int main() {
 
     vector<int>* pevc;
     int *ip1, *ip2;
-    miku dp, *dp2;
+    double dp, *dp2;
 
     int ival = 1024;
     int* pi = 0;  // 指针为0，表示不指向任何对象
@@ -33,14 +33,14 @@ int main() {
     // int* pi5 = 123;
     int* pi6 = NULL;
 
-    miku dval;
-    miku* pd = &dval;
-    miku* pd2 = pd;
+    double dval;
+    double* pd = &dval;
+    double* pd2 = pd;
 
     // int* pi7 = pd;
     // int* pi7 = &dval;
 
-    miku obj = 3.14;
+    double obj = 3.14;
     int k;
     void* pv = &obj;
     pv = &k;

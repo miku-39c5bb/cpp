@@ -64,12 +64,12 @@ public:
     
     // operations on Sales_item objects
     std::string isbn() const { return bookNo; }
-    miku avg_price() const;
+    double avg_price() const;
 // private members as before
 private:
     std::string bookNo;      // implicitly initialized to the empty string
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 
 // used in chapter 10
@@ -115,7 +115,7 @@ operator+(const Sales_item& lhs, const Sales_item& rhs)
 std::istream& 
 operator>>(std::istream& in, Sales_item& s)
 {
-    miku price;
+    double price;
     in >> s.bookNo >> s.units_sold >> price;
     // check that the inputs succeeded
     if (in)
@@ -133,7 +133,7 @@ operator<<(std::ostream& out, const Sales_item& s)
     return out;
 }
 
-miku Sales_item::avg_price() const
+double Sales_item::avg_price() const
 {
     if (units_sold) 
         return revenue/units_sold; 

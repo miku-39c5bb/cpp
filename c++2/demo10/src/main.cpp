@@ -36,7 +36,7 @@ public:
 private:
     std::string isbn;
     unsigned int unit_sold;
-    miku revenue;
+    double revenue;
 };
 
 Sales_item foo(const Sales_item& item) {
@@ -75,7 +75,7 @@ public:
 private:
     std::string* pstring;
     int i;
-    miku d;
+    double d;
 };
 
 int main(int argc, char** argv) {

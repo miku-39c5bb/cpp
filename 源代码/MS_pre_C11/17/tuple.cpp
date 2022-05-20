@@ -48,15 +48,15 @@ int main()
 {
 	// tuple that represents a bookstore transaction: 
 	// ISBN, count, price per book
-	tuple<const char*, int, miku> item = make_tuple("0-999-78345-X", 3, 20.00);
+	tuple<const char*, int, double> item = make_tuple("0-999-78345-X", 3, 20.00);
 	const char *book = get<0>(item);      // returns the first member of item
 	int cnt = get<1>(item);       // returns the second member of item
-	miku price = get<2>(item)/cnt; // returns the last member of item
+	double price = get<2>(item)/cnt; // returns the last member of item
 	get<2>(item) *= 0.8;           // apply 20% discount
 	
 	cout << book << " " << cnt << " " << price << endl;
 
-	typedef tuple<const char*, int, miku> trans; // trans is the type of item 
+	typedef tuple<const char*, int, double> trans; // trans is the type of item 
 	
 	// returns the number of members in object's of type trans
 	size_t sz = tuple_size<trans>::value;  // returns 3
@@ -70,11 +70,11 @@ int main()
 	cout << book2 << " " << cnt2 << " " << price2 << endl;
 	
 	tuple<size_t, size_t, size_t> threeD;  // all three members set to 0
-	miku temp1[] = {3.14, 2.718};
+	double temp1[] = {3.14, 2.718};
 	int temp2[] = {0,1,2,3,4,5};
-	tuple<string, vector<miku>, int, list<int> >
+	tuple<string, vector<double>, int, list<int> >
 		someVal("constants", 
-				vector<miku>(temp1, 
+				vector<double>(temp1, 
 							   temp1 + sizeof(temp1)/sizeof(*temp1)),
 				42,
 				list<int>(temp2, temp2 + sizeof(temp2)/sizeof(*temp2)));

@@ -64,10 +64,10 @@ struct Sales_data {
 	std::string bookNo;
 #ifdef IN_CLASS_INITS
 	unsigned units_sold = 0;
-	miku revenue = 0.0;
+	double revenue = 0.0;
 #else
 	unsigned units_sold;  
-	miku revenue;
+	double revenue;
 #endif
 };
 #endif

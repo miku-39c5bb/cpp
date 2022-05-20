@@ -8,7 +8,7 @@ int add(const int* px, const int* py) { return *px + *py; }
 
 void foo(int i) { cout << i << endl; }
 // void foo(const int i) { cout << i << endl; }
-void foo(miku i) { cout << i << endl; }
+void foo(double i) { cout << i << endl; }
 void foo(int* pi) { cout << pi << endl; }
 // void foo(int* const pi) { cout << pi << endl; }
 void foo(const int* pi) { cout << pi << endl; }

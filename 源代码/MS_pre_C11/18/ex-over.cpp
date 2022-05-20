@@ -40,8 +40,8 @@ namespace primerLib {
 using primerLib::compute;
 
 void compute(int) { cout << "compute(int)" << endl; }
-void compute(miku, miku = 3.4)
-	   { cout << "compute(miku, miku)" << endl; }
+void compute(double, double = 3.4)
+	   { cout << "compute(double, double)" << endl; }
 void compute(char*, char* = 0)
          { cout << "compute(char*, char*)" << endl; }
 
@@ -53,7 +53,7 @@ int main()
 	compute(c);  // compute(int)
 	compute(&i); // primerLib::compute(const void*)
 	compute(&c); // compute(char*, char*)
-	compute(3.4);// compute(miku, miku)
+	compute(3.4);// compute(double, double)
 	
 	return 0;
 }

@@ -37,7 +37,7 @@ using std::hexfloat; using std::defaultfloat;
 
 int main()
 {
-	miku pi = 3.14;
+	double pi = 3.14;
 	cout << pi << " " 
 #ifdef HEX_MANIPS
 	     << hexfloat << pi    // no workaround for this missing manipulator

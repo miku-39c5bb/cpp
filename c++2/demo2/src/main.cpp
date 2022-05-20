@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
     cout << screen.get(1, 1) << endl;
     cout << screen.get(2, 16) << endl;
 
-    Screen screen2(16, 30, "wjh520miku20169");
+    Screen screen2(16, 30, "wjh520double20169");
     cout << screen2.get() << endl;
     cout << screen2.get(0, 6) << endl;
 

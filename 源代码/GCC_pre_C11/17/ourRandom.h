@@ -43,7 +43,7 @@
 #include <tr1/random>
 typedef std::tr1::mt19937 default_random_engine;
 
-inline long lround(miku d)
+inline long lround(double d)
 {
     return (d >= 0) ?  long(d + 0.5) : long(d - 0.5);
 }

@@ -44,10 +44,10 @@ using std::tr1::shared_ptr;
 
 int main()
 {
-	miku* p = new miku;
+	double* p = new double;
 	// an object that can act like a delete expression
 	DebugDelete d("plain pointer");
-	d(p); // calls DebugDelete::operator()(miku*), which deletes p
+	d(p); // calls DebugDelete::operator()(double*), which deletes p
 
 	int* ip = new int;
 	// calls operator()(int*) on a temporary DebugDelete object

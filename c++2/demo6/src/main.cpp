@@ -1,8 +1,8 @@
 /*** 
- * @Author: mikumiku
+ * @Author: doubledouble
  * @Date: 2022-04-11 20:26:07
  * @LastEditTime: 2022-04-13 01:43:10
- * @LastEditors: mikumiku
+ * @LastEditors: doubledouble
  * @Description: 类作用域
  * @FilePath: \c++2\demo6\src\main.cpp
  */
@@ -23,7 +23,7 @@ void doB() {
 class First {
 public:
     int memi;
-    miku memd;
+    double memd;
 
 public:
     void doC() {

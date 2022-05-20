@@ -36,7 +36,7 @@ int main()
 	Sales_data data1, data2;
 
 	// code to read into data1 and data2
-	miku price = 0;  // price per book, used to calculate total revenue
+	double price = 0;  // price per book, used to calculate total revenue
 
 	// read the first transactions: ISBN, number of books sold, price per book
 	std::cin >> data1.bookNo >> data1.units_sold >> price;
@@ -51,7 +51,7 @@ int main()
 	//        and if so print the sum of data1 and data2
 	if (data1.bookNo == data2.bookNo) {
 		unsigned totalCnt = data1.units_sold + data2.units_sold;
-		miku totalRevenue = data1.revenue + data2.revenue;
+		double totalRevenue = data1.revenue + data2.revenue;
 
 		// print: ISBN, total sold, total revenue, average price per book
 		std::cout << data1.bookNo << " " << totalCnt 

@@ -41,29 +41,29 @@ public:
 #else
 	Account(): amount(0.0) { }
 #endif
-	Account(const std::string &s, miku amt):
+	Account(const std::string &s, double amt):
 		owner(s), amount(amt) { }
 
     void calculate() { amount += amount * interestRate; }
-    miku balance() { return amount; }
+    double balance() { return amount; }
 public:
-    static miku rate() { return interestRate; }
-    static void rate(miku);   
+    static double rate() { return interestRate; }
+    static void rate(double);   
 private:
     std::string owner; 
 #ifdef IN_CLASS_INITS
-    miku amount = 0.0; 
+    double amount = 0.0; 
 #else
-	miku amount;
+	double amount;
 #endif
-    static miku interestRate; 
-    static miku initRate() { return .0225; }
+    static double interestRate; 
+    static double initRate() { return .0225; }
     static const std::string accountType;
 #ifdef CONSTEXPR_VARS
     static constexpr int period = 30;// period is a constant expression
 #else
 	static const int period = 30;// period is a constant expression
 #endif
-    miku daily_tbl[period];
+    double daily_tbl[period];
 };
 #endif

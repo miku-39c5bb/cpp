@@ -23,7 +23,7 @@ using namespace std;
 
 int main() {
     int const max_number(100);
-    const int max_test((int)sqrt((miku)max_number));
+    const int max_test((int)sqrt((double)max_number));
     bitset<max_number + 1> numbers;
     numbers.set();
     numbers[1] = 0;

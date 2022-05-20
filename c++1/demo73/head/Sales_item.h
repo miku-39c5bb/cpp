@@ -1,8 +1,8 @@
 /*** 
- * @Author: mikumiku
+ * @Author: doubledouble
  * @Date: 2022-04-01 20:43:43
  * @LastEditTime: 2022-04-04 19:20:00
- * @LastEditors: mikumiku
+ * @LastEditors: doubledouble
  * @Description: 
  * @FilePath: \c++\demo73\head\Sales_item.h
  */
@@ -20,7 +20,7 @@ public:
         return this->isbn == rhs.isbn;
     }
 
-    miku avg_price() const;
+    double avg_price() const;
 
 public:
     Sales_item() : units_sold(0), revenue(0) {}
@@ -29,7 +29,7 @@ public:
 public:
     std::string isbn;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 
 #endif  // !__SALES_ITEM_H_

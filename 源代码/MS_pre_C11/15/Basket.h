@@ -55,7 +55,7 @@ public:
 
     // prints the total price for each book 
 	// and the overall total for all items in the basket
-    miku total_receipt(std::ostream&) const;
+    double total_receipt(std::ostream&) const;
 
 	// for debugging purposes, prints contents of the basket
 	void display (std::ostream&) const;

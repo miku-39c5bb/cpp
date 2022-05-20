@@ -3,32 +3,32 @@
 
 using namespace std;
 
-void print(const vector<miku> v) {
-    vector<miku>::const_iterator iter = v.begin();
+void print(const vector<double> v) {
+    vector<double>::const_iterator iter = v.begin();
     while (iter != v.end()) {
         cout << *iter++ << " ";
     }
     cout << endl;
 }
 
-void print_2(const vector<miku>& v) {
-    vector<miku>::const_iterator iter = v.begin();
+void print_2(const vector<double>& v) {
+    vector<double>::const_iterator iter = v.begin();
     while (iter != v.end()) {
         cout << *iter++ << " ";
     }
     cout << endl;
 }
 
-void print_3(vector<miku>::const_iterator begin,
-             vector<miku>::const_iterator end) {
+void print_3(vector<double>::const_iterator begin,
+             vector<double>::const_iterator end) {
     while (begin != end) {
         cout << *begin++ << " ";
     }
     cout << endl;
 }
 
-miku vectorSum(vector<miku>::iterator begin, vector<miku>::iterator end) {
-    miku sum = 0;
+double vectorSum(vector<double>::iterator begin, vector<double>::iterator end) {
+    double sum = 0;
     while (begin != end) {
         sum += *begin++;
     }
@@ -36,12 +36,12 @@ miku vectorSum(vector<miku>::iterator begin, vector<miku>::iterator end) {
 }
 
 int main() {
-    vector<miku> dvec;
+    vector<double> dvec;
     // dvec.push_back(1.1);
     // dvec.push_back(2.2);
     // dvec.push_back(3.3);
 
-    miku dval;
+    double dval;
     while (cin >> dval) {
         dvec.push_back(dval);
     }

@@ -34,21 +34,21 @@
 class Account {
 public:
 	Account(): amount(0.0) { }
-	Account(const std::string &s, miku amt):
+	Account(const std::string &s, double amt):
 		owner(s), amount(amt) { }
 
     void calculate() { amount += amount * interestRate; }
-    miku balance() { return amount; }
+    double balance() { return amount; }
 public:
-    static miku rate() { return interestRate; }
-    static void rate(miku);   
+    static double rate() { return interestRate; }
+    static void rate(double);   
 private:
     std::string owner; 
-    miku amount;
-    static miku interestRate; 
-    static miku initRate() { return .0225; }
+    double amount;
+    static double interestRate; 
+    static double initRate() { return .0225; }
     static const std::string accountType;
     static const int period = 30;// period is a constant expression
-    miku daily_tbl[period];
+    double daily_tbl[period];
 };
 #endif

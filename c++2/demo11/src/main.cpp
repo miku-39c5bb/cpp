@@ -10,7 +10,7 @@ public:
 private:
     std::string isbn;
     int units_sold;
-    miku revenue;
+    double revenue;
 };
 
 class NoName {
@@ -40,7 +40,7 @@ public:
 private:
     std::string* pstring;
     int i;
-    miku d;
+    double d;
 };
 // 析构函数都没有参数，只能写一个
 NoName::~NoName() {

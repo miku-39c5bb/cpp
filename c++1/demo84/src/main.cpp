@@ -9,8 +9,8 @@ int main() {
 
     // get(cin);
 
-    // cout << "-----继续使用cin，输入一个miku-----" << endl;
-    // miku dval;
+    // cout << "-----继续使用cin，输入一个double-----" << endl;
+    // double dval;
     // cin >> dval;
     // cout << dval << endl;
 

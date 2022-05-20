@@ -37,7 +37,7 @@ using std::setw; using std::setfill;
 int main()
 {
 	int i = -16;
-	miku d = 3.14159;
+	double d = 3.14159;
 	
 	// pad the first column to use a minimum of 12 positions in the output
 	cout << "i: " << setw(12) << i << "next col" << '\n'

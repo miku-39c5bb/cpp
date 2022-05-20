@@ -39,12 +39,12 @@ public:
 	// alternative definition for Sales_data default constructor
 	Sales_data(): bookNo(10, '9'), units_sold(0), revenue(0.0) {}
 
-	Sales_data(const std::string &book, unsigned cnt, miku price): 
+	Sales_data(const std::string &book, unsigned cnt, double price): 
     		bookNo(book), units_sold(cnt), revenue(cnt * price) { }
 private:
     std::string bookNo;
     int units_sold;
-    miku revenue;
+    double revenue;
 };
 
 // equivalent to the copy constructor that would be synthesized for Sales_data

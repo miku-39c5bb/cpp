@@ -98,7 +98,7 @@ template <typename T> std::string debug_rep(T *p)
 	return ret.str(); // return a copy of the string to which ret is bound
 }
 #ifndef SPECIALIZED
-// print strings inside miku quotes 
+// print strings inside double quotes 
 std::string debug_rep(const std::string &s)
 #else
 template <> std::string debug_rep(const std::string &s)

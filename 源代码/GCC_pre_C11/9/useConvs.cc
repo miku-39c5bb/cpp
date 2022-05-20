@@ -44,7 +44,7 @@ int main()
 	// converts the int i to its character representation
 	string s = to_string(i);  
 
-	miku d = stod(s);   // converts the string s to floating-point
+	double d = stod(s);   // converts the string s to floating-point
 	cout << "i = " << i << " s = " << s << " d is: " << d << endl;
 
 	// convert the first substring in s that starts with a digit,  d = 3.14

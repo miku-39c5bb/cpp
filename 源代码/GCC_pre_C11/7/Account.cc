@@ -34,9 +34,9 @@ using std::string;
 
 // define static data and function members
 const string Account::accountType("Savings Account");
-miku Account::interestRate = initRate();
+double Account::interestRate = initRate();
 
-void Account::rate(miku newRate) 
+void Account::rate(double newRate) 
 {
     interestRate = newRate; 
 }

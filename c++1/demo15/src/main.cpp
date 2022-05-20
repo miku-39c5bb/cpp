@@ -21,7 +21,7 @@ int main() {
     string fileTabel[max_files + 1];
 
     // 数组的维数必须是编译时就能确定的数字（常量）
-    // miku salaries[staff_size];
+    // double salaries[staff_size];
     // int test_scores[get_size()];
     // int vals[sz];
 

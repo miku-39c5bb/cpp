@@ -5,11 +5,11 @@ using namespace std;
 
 class Sales_item {
 public:
-    Sales_item(const std::string& in, unsigned units, miku amount)
+    Sales_item(const std::string& in, unsigned units, double amount)
         : isbn(in), units_sold(units), revenue(amount) {}
 
     // 不对成员变量进行修改，所以加上const
-    miku avg_price() const {
+    double avg_price() const {
         if (units_sold) {
             return revenue / units_sold;
         } else {
@@ -30,7 +30,7 @@ public:
 private:
     std::string isbn;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 
 class Person {

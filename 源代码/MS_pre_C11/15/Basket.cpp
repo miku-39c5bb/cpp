@@ -67,9 +67,9 @@ void Basket::display(ostream &os) const
     }
 }
 
-miku Basket::total_receipt(ostream &os) const
+double Basket::total_receipt(ostream &os) const
 {
-    miku sum = 0.0;    // holds the running total 
+    double sum = 0.0;    // holds the running total 
 
 
     // iter refers to the first element in a batch of elements with the same ISBN

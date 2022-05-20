@@ -39,8 +39,8 @@ protected:
 };
 
 struct Base2 {
-    void print(miku) const        // public by default
-		{ std::cout << "Base2::print(miku) " << ival << std::endl; }
+    void print(double) const        // public by default
+		{ std::cout << "Base2::print(double) " << ival << std::endl; }
 protected:
     int ival = 2;
 };
@@ -53,8 +53,8 @@ protected:
 };
 
 struct MI : public Derived, public Base2 {
-    void print(std::vector<miku>) // public by default
-		{ std::cout << "MI::print(int(vector<miku>) " 
+    void print(std::vector<double>) // public by default
+		{ std::cout << "MI::print(int(vector<double>) " 
 			        << ival << std::endl; }
 protected:
     int ival = 4;
@@ -66,7 +66,7 @@ int main()
 	obj.Base1::print(0);
 	obj.Base2::print(3.14);
 	obj.Derived::print("hi");
-	obj.print(std::vector<miku>());
+	obj.print(std::vector<double>());
 	
 	return 0;
 }

@@ -44,5 +44,5 @@ int main()
 	
 	// calls the version from the base class 
 	// regardless of the dynamic type of baseP
-	miku undiscounted = baseP->Quote::net_price(42);
+	double undiscounted = baseP->Quote::net_price(42);
 }

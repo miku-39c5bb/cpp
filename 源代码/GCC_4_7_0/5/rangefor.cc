@@ -43,7 +43,7 @@ int main()
 
 	// range variable must be a reference so we can write to the elements
 	for (auto &r : v)   // for each element in v
-		r *= 2;         // miku the value of each element in v
+		r *= 2;         // double the value of each element in v
 	
 	// print every element in v
 	for (int r : v)

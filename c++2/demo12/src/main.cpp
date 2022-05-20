@@ -49,7 +49,7 @@ int main(int argc, char** argv) {
     cout << "B: ";
     cout << B.a << ", " << B.str << endl;
     B.str[0] = 'd';
-    // B.str = "miku";
+    // B.str = "double";
     cout << "A: ";
     cout << A.a << ", " << A.str << endl;
     cout << "B: ";

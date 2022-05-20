@@ -1,8 +1,8 @@
 /*** 
- * @Author: mikumiku
+ * @Author: doubledouble
  * @Date: 2022-04-13 01:47:18
  * @LastEditTime: 2022-04-13 13:11:54
- * @LastEditors: mikumiku
+ * @LastEditors: doubledouble
  * @Description: 构造函数
  * @FilePath: \c++2\demo7\src\main.cpp
  */
@@ -36,12 +36,12 @@ public:
     // 速度慢，不推荐，初始化是一定会有的，不管有没有初始化列表，这种写法会赋值两次
     // 以前的C++不会初始化内置类型，比如int，另一些如string就会在初始化列表初始化
     // 另外，即使没有在初始化列表写类类型（如string），它也会被初始化
-    explicit Sales_item(int units, miku price) {
+    explicit Sales_item(int units, double price) {
         this->units_sold = units;
         this->revenue = price * this->units_sold;
     }
     // 初始化列表的顺序不是真正初始化的顺序，真正的初始化顺序是定义成员变量的顺序
-    explicit Sales_item(const std::string& book, int units, miku price)
+    explicit Sales_item(const std::string& book, int units, double price)
         : isbn(book), units_sold(units), revenue(price * this->units_sold) {}
     bool same_isbn(const Sales_item& other) const {
         return this->isbn == other.isbn;
@@ -53,10 +53,10 @@ private:
 public:
     std::string isbn;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 inline std::istream& operator>>(std::istream& in, Sales_item& item) {
-    miku price;
+    double price;
     in >> item.isbn >> item.units_sold >> price;
     if (in) {
         item.revenue = item.units_sold * price;
@@ -86,7 +86,7 @@ class TT {};
 class Data {
 public:
     int i;
-    miku d;
+    double d;
 };
 
 int main(int argc, char** argv) {

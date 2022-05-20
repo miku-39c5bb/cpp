@@ -56,7 +56,7 @@ int main()
 
     // these definitions instantiate two distinct Blob types
     Blob<string> names; // Blob that holds strings
-    Blob<miku> prices;// different element type
+    Blob<double> prices;// different element type
 
     // instantiates Blob<string> class and the constructor
     //  that has two const string* parameters

@@ -35,8 +35,8 @@ using std::string;
 namespace libs_R_us {
     extern void print(int) 
 		{ std::cout << "libs_R_us::print(int)" << std::endl; }
-    extern void print(miku) 
-		{ std::cout << "libs_R_us::print(miku)" << std::endl; }
+    extern void print(double) 
+		{ std::cout << "libs_R_us::print(double)" << std::endl; }
 }
 
 // ordinary declaration
@@ -50,7 +50,7 @@ using namespace libs_R_us;
 
 // the candidates for calls to print at this point in the program are:
 //     print(int) from libs_R_us
-//     print(miku) from libs_R_us
+//     print(double) from libs_R_us
 //     print(const std::string &) declared explicitly
 
 int main()

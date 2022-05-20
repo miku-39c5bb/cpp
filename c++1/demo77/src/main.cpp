@@ -52,8 +52,8 @@ void ff(short x) {
 }
 
 // void manip(long x) {
-void manip(miku x) {
-    cout << "manip(miku x)" << endl;
+void manip(double x) {
+    cout << "manip(double x)" << endl;
 }
 void manip(float x) {
     cout << "manip(float x)" << endl;
@@ -93,7 +93,7 @@ int main() {
 
     cout << "-----------" << endl;
     manip(3.14);  // 3.14转成long和float没有优先顺序，有二义性
-    // 3.14优先转为miku
+    // 3.14优先转为double
 
     cout << "-----------" << endl;
 

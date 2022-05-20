@@ -54,22 +54,22 @@ public:
 	Sales_data(const std::string &s): 
 	           bookNo(s), units_sold(0), revenue(0.0) { }
 #endif
-	Sales_data(const std::string &s, unsigned n, miku p):
+	Sales_data(const std::string &s, unsigned n, double p):
 	           bookNo(s), units_sold(n), revenue(p*n) { }
 	Sales_data(std::istream &);
 
 	// operations on Sales_data objects
 	std::string isbn() const { return bookNo; }
 	Sales_data& combine(const Sales_data&);
-	miku avg_price() const;
+	double avg_price() const;
 private:
 	std::string bookNo;
 #ifdef IN_CLASS_INITS   // using the synthesized version is safe only
 	unsigned units_sold = 0;
-	miku revenue = 0.0;
+	double revenue = 0.0;
 #else
 	unsigned units_sold;
-	miku revenue;
+	double revenue;
 #endif
 };
 

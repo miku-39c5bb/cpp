@@ -42,7 +42,7 @@ void String::print() const {
 }
 
 int main(int argc, char** argv) {
-    String s("wjh 520 miku 20169");
+    String s("wjh 520 double 20169");
     // cout << s[5] << endl;
     s.print();
 

@@ -61,7 +61,7 @@ int main()
 	enum peppers {redPep, yellowPep, greenPep};
 	
 	// unnamed, unscoped enum
-	enum {floatPrec = 6, mikuPrec = 10, miku_mikuPrec = 10};
+	enum {floatPrec = 6, doublePrec = 10, double_doublePrec = 10};
 	
 	// enumerators are in scope for an unscoped enumeration
 	color eyes = green; 

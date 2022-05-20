@@ -43,7 +43,7 @@ int main()
 	int j = b;              // j has value 1
 	std::cout << j << std::endl; // prints 1
 
-	miku pi = 3.14;       // pi has value 3.14
+	double pi = 3.14;       // pi has value 3.14
 	std::cout << pi << std::endl; // prints 3.14
 
 	j = pi;                 // j has value 3

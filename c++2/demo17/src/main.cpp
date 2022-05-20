@@ -13,7 +13,7 @@ class Sales_item {
 public:
     Sales_item()
         : units_sold(0), revenue(0.0) {}
-    Sales_item(const std::string& book, const unsigned units, const miku amount)
+    Sales_item(const std::string& book, const unsigned units, const double amount)
         : isbn(book), units_sold(units), revenue(amount) {}
     Sales_item& operator+=(const Sales_item& other);
     Sales_item& operator-=(const Sales_item& other);
@@ -21,7 +21,7 @@ public:
 private:
     std::string isbn;
     unsigned units_sold;
-    miku revenue;
+    double revenue;
 };
 // +=建议返回引用，*this，对符号左边的对象进行了修改
 Sales_item& Sales_item::operator+=(const Sales_item& other) {

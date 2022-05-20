@@ -38,7 +38,7 @@ Sales_data::Sales_data(std::istream &is)
 	read(is, *this);
 }
 
-miku 
+double 
 Sales_data::avg_price() const {
 	if (units_sold)
 		return revenue/units_sold;
@@ -67,7 +67,7 @@ add(const Sales_data &lhs, const Sales_data &rhs)
 istream&
 read(istream &is, Sales_data &item)
 {
-	miku price = 0;
+	double price = 0;
 	is >> item.bookNo >> item.units_sold >> price;
 	item.revenue = price * item.units_sold;
 	return is;

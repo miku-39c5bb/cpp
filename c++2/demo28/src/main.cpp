@@ -43,7 +43,11 @@ int main() {
     Sales_item item(cin);
     cout << item << endl;
 
-    b = item;
+    string s = item;
+    double m = item;
+    cout << s << endl;
+    cout << m << endl;
+    cout << item << endl;
 
     return 0;
 }

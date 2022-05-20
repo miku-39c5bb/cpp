@@ -43,5 +43,7 @@ int main() {
     Sales_item item(cin);
     cout << item << endl;
 
+    b = item;
+
     return 0;
 }
